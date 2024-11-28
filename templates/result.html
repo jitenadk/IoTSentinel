@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Scan Results</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>IP Address</th>
+                <th>MAC Address</th>
+                <th>Vulnerabilities</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for device in devices %}
+            <tr>
+                <td>{{ device.ip }}</td>
+                <td>{{ device.mac }}</td>
+                <td>
+                    {% if device.vulnerabilities %}
+                        <ul>
+                            {% for vuln in device.vulnerabilities %}
+                                <li>{{ vuln }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        None
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
