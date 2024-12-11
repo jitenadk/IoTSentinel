@@ -16,7 +16,6 @@ def scan_network(ip_range):
 
 def check_vulnerabilities(device):
     """Checks a device for common vulnerabilities."""
-    
     vulnerabilities = []
     if device.get('mac') == 'N/A':
         vulnerabilities.append('MAC address not detected')
