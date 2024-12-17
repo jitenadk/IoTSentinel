@@ -33,37 +33,47 @@ Clone this repository to your local machine:
 ```bash
 git clone https://github.com/yourusername/IoTSentinel.git
 cd IoTSentinel
+```
+
 3. Set Up the Virtual Environment
 Create and activate a virtual environment to isolate dependencies:
 
-bash
+```bash
 Copy code
 python3 -m venv venv
 source venv/bin/activate  # On Linux/macOS
+```
 For Windows:
 
-bash
+```bash
 Copy code
 venv\Scripts\activate
+```
+
 4. Install Dependencies
 Install the required Python libraries listed in requirements.txt:
 
-bash
+```bash
 Copy code
 pip install -r requirements.txt
+```
+
 Usage
 1. Running the Scanner
 To start the network scanner and detect IoT devices:
 
-bash
+```bash
 Copy code
 python src/scanner.py
+```
+
 2. Running the Flask Web Interface
 To launch the web interface:
 
-bash
+```bash
 Copy code
 python src/server.py
+```
 Open your browser and navigate to http://localhost:5000.
 
 3. Generate Reports
@@ -72,7 +82,7 @@ Reports can be generated directly from the web interface after completing a scan
 Project Structure
 The project is organized as follows:
 
-php
+```php
 Copy code
 IoTSentinel/
 │
@@ -88,6 +98,7 @@ IoTSentinel/
 │
 ├── requirements.txt       # List of Python dependencies
 └── README.md              # Project documentation
+```
 Development Roadmap
 Completed:
 Basic Flask app with homepage
@@ -111,4 +122,4 @@ For questions or feedback, please reach out to:
 Email: yourname@example.com
 GitHub: jitenadk
 
-```
+
